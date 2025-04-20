@@ -1,0 +1,22 @@
+.footer {
+    background-color: #203244;
+    color: #caba9f;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+.bg-pet{
+    background-color: #203244;
+  }
+  .let-pet{
+    color: #203244;
+  }
+  .bg-bage{
+    background-color: #caba9f;
+  }
+  .let-bage{
+    color: #caba9f;
+  }
+  .CA{
+    font-family: Georgia;
+  }

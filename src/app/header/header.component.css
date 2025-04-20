@@ -1,0 +1,19 @@
+.bg-pet{
+    background-color: #203244;
+  }
+a{
+    color: #caba9f;
+}
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+@media screen and (max-width: 768px) {
+  .navbar-nav {
+      text-align: center;
+  }
+  .navbar-toggler {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+  }
+}
