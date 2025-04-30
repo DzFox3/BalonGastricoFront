@@ -183,7 +183,7 @@
                 <!--FORMULARIO-->
                 <div class="col-md-6 col-12 form-container" id="formu">
                     <h3 class="pt-4 pb-3">FORMULARIO DE CONTACTO</h3>
-                    <form (ngSubmit)="enviarFormulario()">
+                    <form #miFormulario="ngForm" (ngSubmit)="enviarFormulario(miFormulario)">
                         
                         <div class="form-group">
                             <label for="weight">Peso (kg)<span>*</span></label>

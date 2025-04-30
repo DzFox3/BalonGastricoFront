@@ -1,5 +1,7 @@
 import { Component, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
 import { EmailService } from '../services/email.service';
+import { NgForm } from '@angular/forms';
+
 
 @Component({
   selector: 'app-home',
@@ -48,10 +50,9 @@ export class HomeComponent implements AfterViewInit {
   showSuccess = false;
   showError = false;
 
-  enviarFormulario() {
+  enviarFormulario(form: NgForm) {
     // Asegurarse de que todos los campos sean válidos
     if (this.formulario.peso == '' || this.formulario.altura == '' || this.formulario.nombre == '' || this.formulario.apellido == '' || this.formulario.email == '' || this.formulario.telefono == '') {
-      
       this.showError = true;
       setTimeout(() => {
         this.showError = false;
@@ -62,6 +63,9 @@ export class HomeComponent implements AfterViewInit {
         response => {
           // Mostrar alerta de éxito
           this.showSuccess = true;
+          
+          form.resetForm();
+  
           setTimeout(() => {
             this.showSuccess = false;
           }, 10000); // Ocultar la alerta de éxito después de 10 segundos
