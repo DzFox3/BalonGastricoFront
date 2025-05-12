@@ -22,18 +22,21 @@
   .let{
     font-size: 18px;
   }
-
-  /*CSS IMG DOC*/
-  .doctora-img {
-    border-radius: 25px; /* Bordes redondeados */
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Sombra elegante */
-    filter: brightness(0.95) contrast(1.1) saturate(1.1); /* Ajuste de color */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto de animación */
+  .vid-d {
+    padding-top: 40px;
   }
-
-  .doctora-img:hover {
-      transform: scale(1.03); /* Efecto de acercamiento al pasar el mouse */
-      box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.5); /* Aumenta la sombra */
+  video {
+    margin-top: 35px;
+    width: 100%;
+    border-radius: 20px;
+    height: 83%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  video:hover {
+    transform: scale(1.01);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   }
 
   /* Close button */
@@ -288,6 +291,14 @@
       padding-left: 0rem !important;
       padding-right: 0.5rem !important;
       margin-top: -2rem !important;
+    }
+    video {
+      margin-top: -15px;
+      width: 100%;
+      border-radius: 20px;
+      height: 103%;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
   }
   .cam:hover {
