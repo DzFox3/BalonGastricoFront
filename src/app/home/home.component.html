@@ -13,10 +13,17 @@
                 </div>
             </div>
             <div class="col-md-6 col-12 bg-bage p-4">
-                <video #videoElement muted playsinline>
+                <video #videoElement playsinline class="w-100">
                     <source src="assets/video/vid-doc.mp4" type="video/mp4">
                     Tu navegador no soporta el video.
-                </video>               
+                </video>
+
+                <button 
+                    *ngIf="mostrarBotonSonido" 
+                    class="btn bg-moz btn-sonido"
+                    (click)="activarVideoConSonido()">
+                    {{ movil ? '🔊 Activar sonido' : '🔊 Toca para activar el sonido del video' }}
+                </button>            
             </div>
         <!--SECCION TESTIMONIOS-->
         <div class="col-12 p-3 CA bg-bage2 pb-4"  id="testimonios">
@@ -57,7 +64,7 @@
                             <img class="img" style="width: 101%; height: 101%;" src="assets/imagenes/t4-Jara.png" alt="">
                         </div>
                         <span>BERNADET JARA</span>
-                        <button (click)="abrirEnlace('https://youtu.be/zRIbf6JqkNc?list=RDMM09839DpTctU')">TES COMPLETO</button>
+                        <button (click)="abrirEnlace('https://www.youtube.com/watch?v=XA_68Yao4g0')">TES COMPLETO</button>
                     </div>
                 </div>
             </div>

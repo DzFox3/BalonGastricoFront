@@ -25,6 +25,7 @@
   .vid-d {
     padding-top: 40px;
   }
+  /*CSS PARA EL VIDEO Y BOTON DE INICIAR*/
   video {
     margin-top: 35px;
     width: 100%;
@@ -37,6 +38,17 @@
   video:hover {
     transform: scale(1.01);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+
+  .btn-sonido {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    opacity: 0.9;
   }
 
   /* Close button */
@@ -299,6 +311,16 @@
       height: 103%;
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .btn-sonido {
+      position: absolute;
+      top: 96%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      opacity: 0.9;
     }
   }
   .cam:hover {

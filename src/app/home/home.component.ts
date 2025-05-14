@@ -21,6 +21,21 @@ export class HomeComponent implements AfterViewInit {
     telefono: ''
   };
   
+  movil = false;
+
+  ngOnInit(): void {
+    this.verificarResolucion();
+    window.addEventListener('resize', this.verificarResolucion.bind(this));
+  }
+
+  ngOnDestroy(): void {
+    window.removeEventListener('resize', this.verificarResolucion.bind(this));
+  }
+
+  verificarResolucion(): void {
+    this.movil = window.innerWidth <= 768;
+  }
+
   constructor(private emailService: EmailService) {}
 
   //Encargado de abrir links de botones en testimonios
@@ -28,22 +43,20 @@ export class HomeComponent implements AfterViewInit {
     window.open(url, '_blank'); // Abre el enlace en una nueva pestaña
   }
 
-  //Encargado de reproducir automaticamente el video explicativo del programa
-  ngAfterViewInit() {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            this.video.nativeElement.play();
-          } else {
-            this.video.nativeElement.pause();
-          }
-        });
-      },
-      { threshold: 0.5 } // Se activa cuando el 50% del video está visible
-    );
+  //Encargado de la reproduccion del video
+  mostrarBotonSonido = true;
 
-    observer.observe(this.video.nativeElement);
+  ngAfterViewInit(): void {
+    const videoEl = this.video.nativeElement;
+    videoEl.muted = true;
+    videoEl.pause(); // Asegura que esté detenido al principio
+  }
+
+  activarVideoConSonido(): void {
+    const videoEl = this.video.nativeElement;
+    videoEl.muted = false;
+    videoEl.play();
+    this.mostrarBotonSonido = false; // Oculta el botón
   }
 
   //Encaragdo de enviar correo electronico + show para mensaje de enviado correctamente
