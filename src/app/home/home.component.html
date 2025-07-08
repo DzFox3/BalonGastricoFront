@@ -193,7 +193,7 @@
                 <!--FORMULARIO-->
                 <div class="col-md-6 col-12 form-container" id="formu">
                     <h3 class="pt-4 pb-3">FORMULARIO DE CONTACTO</h3>
-                    <form #miFormulario="ngForm" (ngSubmit)="enviarFormulario(miFormulario)">
+                    <!--<form #miFormulario="ngForm" (ngSubmit)="enviarFormulario(miFormulario)">
                         
                         <div class="form-group">
                             <label for="weight">Peso (kg)<span>*</span></label>
@@ -293,28 +293,32 @@
                           </div>
                         
                           <div class="pb-3"></div>
-                          
+                        -->
                           <!-- Botón de envío deshabilitado si el formulario es inválido -->
-                          <button class="bg-pet submit-btn" type="submit" [disabled]="!formulario.peso || !formulario.altura || !formulario.nombre || !formulario.apellido || !formulario.email || !formulario.telefono">
+                     <!--     <button class="bg-pet submit-btn" type="submit" [disabled]="!formulario.peso || !formulario.altura || !formulario.nombre || !formulario.apellido || !formulario.email || !formulario.telefono">
                             Enviar Email
                           </button>
                           
                           <div class="pb-2"></div>    
-                    </form>                                          
+                    </form>  -->
+                    <div>
+                        <iframe
+                            src="https://api.leadconnectorhq.com/widget/form/HaLshDNbzJZ7Eev3XZ1i"
+                            style="width:100%; height:750px; border:none; border-radius:10px;"
+                            allowtransparency="true"
+                            frameborder="0"
+                            scrolling="no"
+                            title="Formulario Balón Gástrico"
+                        >
+                        </iframe>
+                    </div>
+                    <script src="https://link.msgsndr.com/js/form_embed.js"></script>                                                  
                 </div>
-            </div>            
+            </div>         
         </div>
     </div>
 
-    <!-- Alerta de éxito correo-->
-    <div *ngIf="showSuccess" class="alert success CA">
-        <strong>¡Éxito!</strong> El correo se ha enviado correctamente.
-    </div>  
-    <!-- Alerta de error correo-->
-    <div *ngIf="showError" class="alert error">
-        <strong>Error</strong> Todos los campos deben ser rellenados antes de enviar el correo!!.
-    </div>
-    <!-- Botón de WhatsApp -->
-    <a href="https://wa.me/+34747449569" class="whatsapp-btn" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-    </a>
+<!-- Botón de WhatsApp -->
+<a href="https://wa.me/+34747449569" class="whatsapp-btn" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
