@@ -176,73 +176,6 @@
     gap: 10px; /* Espacio entre icono y texto */
     font-size: 16px;
   }
-  /*CSS FORMULARIO*/
-  .form-container {
-    background-color: #e3e3e3;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 100%;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
-
-  .form-group {
-      display: flex;
-      flex-direction: column;
-      padding-top: 10px;
-  }
-
-  .form-group label {
-      font-size: 14px;
-      font-weight: bold;
-      color: #333;
-      padding-bottom: 10px;
-  }
-
-  .form-group span {
-      color: red;
-  }
-
-  .form-group input {
-      padding: 8px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 14px;
-  }
-
-  .form-group input:focus {
-      outline: none;
-  }
-
-  .submit-btn {
-      grid-column: span 2;
-      color: white;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-  }
-
-  .submit-btn:hover {
-      background-color: #d0a418;
-  }
-  .contactanos {
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto de animación */    
-  }
-  .contactanos:hover{
-    transform: scale(1.03); /* Efecto de acercamiento al pasar el mouse */
-    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.5); /* Aumenta la sombra */
-  }
-  .contactanos:hover {
-    background: #d0a418;   
-    color: white;
-    cursor: pointer;
-  }
   /*FORMULARIO GHL*/
  .ghl-form {
     width: 100%;
@@ -330,7 +263,7 @@
       opacity: 0.9;
     }
     .ghl-form{
-      height: 900px;
+      height: 1000px;
     }
   }
   .cam:hover {
