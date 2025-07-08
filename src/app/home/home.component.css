@@ -243,6 +243,13 @@
     color: white;
     cursor: pointer;
   }
+  /*FORMULARIO GHL*/
+ .ghl-form {
+    width: 100%;
+    height: 750px;
+    border: none;
+    border-radius: 10px;
+  }
 
   /*BOTON WHATSAPP*/
   .whatsapp-btn {
@@ -321,6 +328,9 @@
       padding: 1rem 2rem;
       font-size: 1.2rem;
       opacity: 0.9;
+    }
+    .ghl-form{
+      height: 900px;
     }
   }
   .cam:hover {
